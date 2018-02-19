@@ -6,7 +6,7 @@ export const employeesReducer = (oldState = {}, action) => {
   switch(action.type) {
     case RECEIVE_EMPLOYEE:
       newState = Object.assign({}, oldState);
-      let newEmployee = action.data;
+      let newEmployee = action.data.data;
       newState[newEmployee.id] = newEmployee;
       return newState;
     case RECEIVE_ALL_EMPLOYEES:

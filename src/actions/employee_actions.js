@@ -17,3 +17,8 @@ export const fetchAllEmployees = () => dispatch => {
   return APIUtil.fetchAllEmployees()
   .then(employees => dispatch(receiveAllEmployees(employees)));
 };
+
+export const createNewEmployee = employee => dispatch => {
+  return APIUtil.createNewEmployee(employee)
+  .then(newEmployee => dispatch(receiveEmployee(newEmployee)));
+};
